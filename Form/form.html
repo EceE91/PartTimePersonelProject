@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Part Time Personnel Profile</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		
+<script>
+   
+		window.onload= function(){ 
+				$("#drpdownMondayid").hide();
+				$("#drpdownTuesdayid").hide();
+				$("#drpdownWednesdayid").hide();
+				$("#drpdownThursdayid").hide();//prop('disabled', true);
+				$("#drpdownFridayid").hide();
+		};
+		
+		
+		$(document).ready(function(){
+			$('#saveForm').on('click', function(){
+			var file = $('#cvPath').val();
+			if ( file ){
+				} else {
+				alert('No File Chosen!');
+			}
+		});
+		});
+		
+		$(document).ready(function(){
+			$('#cvPath').on('change', function(){
+			var file = $(this).val();
+			if ( file ){
+				
+			} else {
+				alert('No File Chosen!');
+			}
+		});
+		});
+		
+		$(document).ready(function(){
+			$('#saveForm').on('click', function(){
+			var file = $('#photoPath').val();
+			if ( file ){
+				} else {
+				alert('No File Chosen!');
+			}
+		});
+		});
+		
+		$(document).ready(function(){
+			$('#photoPath').on('change', function(){
+			var file = $(this).val();
+			if ( file ){
+				
+			} else {
+				alert('No File Chosen!');
+			}
+		});
+		});
+		
+		
+		var ageCheckbox = document.getElementById('chkboxFriday');
+		var ageInput = document.getElementById('drpdownFridayid');
+		
+		$(document).ready(function(){
+			$("#chkboxThursday").click(function(){
+				    $("#drpdownThursdayid").toggle();
+				  });
+		});
+		$(document).ready(function(){
+			$("#chkboxWednesday").click(function(){
+				    $("#drpdownWednesdayid").toggle();
+				  });
+		});
+		$(document).ready(function(){
+			$("#chkboxTuesday").click(function(){
+				    $("#drpdownTuesdayid").toggle();
+				  });
+		});
+		$(document).ready(function(){
+			$("#chkboxMonday").click(function(){
+				    $("#drpdownMondayid").toggle();
+				  });
+		});
+		
+		$(document).ready(function(){
+			$("#chkboxFriday").click(function(){
+				    $("#drpdownFridayid").toggle();
+				  });
+		});
+		
+	
+</script>
+		
+
+
+
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+
+		<h1><a>Part Time Personnel Profile</a></h1>  
+		<form id="form_796235" class="appnitro" enctype="multipart/form-data" method="post" action="../Controller/CreatePersonelProfile.php">
+					<div class="form_description">
+			<h2>Part Time Personnel Profile</h2>
+			<p>Fill this form below</p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="element_1">Name </label>
+		<div>
+			<input id="element_1" name="name" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">Surname </label>
+		<div>
+			<input id="element_2" name="surname" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">University </label>
+		<div>
+			<input id="element_3" name="university" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>
+					<li id="li_30" >
+					<label class="description" for="element_30">Department</label>
+					<div>
+						<input id="element_30" name="department" class="element text medium" type="text" maxlength="255" value=""/> 
+					</div> 
+					</li>
+		<li id="li_5" >
+		<label class="description" for="element_5">Workplace </label>
+		<div>
+		<select class="element select medium" id="element_5" name="workplace"> 
+			
+			<option value="Urla" selected>Urla</option>
+			<option value="Buca" >Buca</option>
+
+		</select>
+		</div> 
+		</li>		<li id="li_13" >
+		<label class="description" for="element_13">Email </label>
+		<div>
+			<input id="element_13" name="email" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_12" >
+		<label class="description" for="element_12">GSM </label>
+		<span>
+			<input id="element_12_1" name="gsm1" class="element text" size="3" maxlength="3" value="" type="text"> -
+			<label for="element_12_1">(###)</label>
+		</span>
+		<span>
+			<input id="element_12_2" name="gsm2" class="element text" size="3" maxlength="3" value="" type="text"> -
+			<label for="element_12_2">###</label>
+		</span>
+		<span>
+	 		<input id="element_12_3" name="gsm3" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_12_3">####</label>
+		</span>
+		 
+		</li>		<li id="li_7" >
+		<label class="description" for="element_7">Address </label>
+		<div>
+			<textarea id="element_7" name="address" class="element textarea medium"></textarea> 
+		</div> 
+		</li>		<li id="li_8" >
+		<label class="description" for="element_8">Assigned Project </label>
+		<div>
+			<textarea id="element_8" name="assignedProject" class="element textarea small"></textarea> 
+		</div> 
+		</li>		<li id="li_9" >
+		<label class="description" for="element_9">Mentor </label>
+		<div>
+			<input id="element_9" name="mentor" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_10" >
+		<label class="description" for="element_10">Upload your CV </label>
+		<div>
+			<input id="cvPath" name="cvPath" class="element file" type="file"/> 
+		</div>  
+		</li>		<li id="li_11" >
+		<label class="description" for="element_11">Upload your Photograph </label>
+		<div>
+			<input id="photoPath" name="photoPath" class="element file" type="file"/> 
+		</div>
+		</li>   <li id="li_12" >
+		<label class="description" for="element_12">Needs Personel Transportation Service </label>
+		<div>
+			<input type="checkbox" name="isNeedService" value="Yes">Yes	
+		</div>
+		<table>
+		  <tr>
+		    <td><li id="li_2" >
+		<label class="description" for="element_2">Programming Skills </label>
+		<span>
+			<input id="element_2_1" name="competence_list[]" class="element checkbox" type="checkbox" value="Java" />
+			<label class="choice" for="element_2_1">Java</label>
+			<input id="element_2_2" name="competence_list[]" class="element checkbox" type="checkbox" value="C/C++" />
+			<label class="choice" for="element_2_2">C/C++</label>
+			<input id="element_2_3" name="competence_list[]" class="element checkbox" type="checkbox" value="Objective C" />
+			<label class="choice" for="element_2_3">Objective C</label>
+			<input id="element_2_4" name="competence_list[]" class="element checkbox" type="checkbox" value="ASP.NET" />
+			<label class="choice" for="element_2_4">ASP.NET</label>
+			<input id="element_2_5" name="competence_list[]" class="element checkbox" type="checkbox" value="C#" />
+			<label class="choice" for="element_2_5">C#</label>
+			<input id="element_2_6" name="competence_list[]" class="element checkbox" type="checkbox" value="CUDA C/C++" />
+			<label class="choice" for="element_2_6">CUDA C/C++</label>
+			<input id="element_2_7" name="competence_list[]" class="element checkbox" type="checkbox" value="OpenGL" />
+			<label class="choice" for="element_2_7">OpenGL</label>
+			<input id="element_2_8" name="competence_list[]" class="element checkbox" type="checkbox" value="SQL" />
+			<label class="choice" for="element_2_8">SQL</label>
+			<input id="element_2_9" name="competence_list[]" class="element checkbox" type="checkbox" value="HTML" />
+			<label class="choice" for="element_2_9">HTML</label>
+			<input id="element_2_10" name="competence_list[]" class="element checkbox" type="checkbox" value="HTML5" />
+			<label class="choice" for="element_2_10">HTML5</label>
+			<input id="element_2_11" name="competence_list[]" class="element checkbox" type="checkbox" value="CSS/CSS3" />
+			<label class="choice" for="element_2_11">CSS/CSS3</label>
+			<input id="element_2_12" name="competence_list[]" class="element checkbox" type="checkbox" value="JQuery" />
+			<label class="choice" for="element_2_12">JQuery</label>
+			<input id="element_2_13" name="competence_list[]" class="element checkbox" type="checkbox" value="PHP" />
+			<label class="choice" for="element_2_13">PHP</label>
+			<input id="element_2_14" name="competence_list[]" class="element checkbox" type="checkbox" value="Fortran" />
+			<label class="choice" for="element_2_14">Fortran</label>
+			<input id="element_2_15" name="competence_list[]" class="element checkbox" type="checkbox" value="Phyton" />
+			<label class="choice" for="element_2_15">Phyton</label>
+			<input id="element_2_16" name="competence_list[]" class="element checkbox" type="checkbox" value="Ruby" />
+			<label class="choice" for="element_2_16">Ruby</label>
+			<input id="element_2_17" name="competence_list[]" class="element checkbox" type="checkbox" value="Erlang" />
+			<label class="choice" for="element_2_17">Erlang</label>
+			<input id="element_2_18" name="competence_list[]" class="element checkbox" type="checkbox" value="Scala" />
+			<label class="choice" for="element_2_18">Scala</label>
+			<input id="element_2_19" name="competence_list[]" class="element checkbox" type="checkbox" value="Haskell" />
+			<label class="choice" for="element_2_19">Haskell</label>
+			<input id="element_2_20" name="competence_list[]" class="element checkbox" type="checkbox" value="Prolog" />
+			<label class="choice" for="element_2_20">Prolog</label>
+			<input id="element_2_21" name="competence_list[]" class="element checkbox" type="checkbox" value="LISP" />
+			<label class="choice" for="element_2_21">LISP</label>
+			<input id="element_2_22" name="competence_list[]" class="element checkbox" type="checkbox" value="JSP" />
+			<label class="choice" for="element_2_22">JSP</label>
+
+					</span> 
+					</li></td>
+					    <td><li id="li_3" >
+					<label class="description" for="element_3">Database Knowledge </label>
+					<span>
+			<input id="element_3_1" name="competence_list[]" class="element checkbox" type="checkbox" value="MySQL" />
+			<label class="choice" for="element_3_1">MySQL</label>
+			<input id="element_3_2" name="competence_list[]" class="element checkbox" type="checkbox" value="Microsoft SQL" />
+			<label class="choice" for="element_3_2">Microsoft SQL</label>
+			<input id="element_3_3" name="competence_list[]" class="element checkbox" type="checkbox" value="Oracle" />
+			<label class="choice" for="element_3_3">Oracle</label>
+			<input id="element_3_4" name="competence_list[]" class="element checkbox" type="checkbox" value="DB2" />
+			<label class="choice" for="element_3_4">DB2</label>
+			<input id="element_3_5" name="competence_list[]" class="element checkbox" type="checkbox" value="SQLite" />
+			<label class="choice" for="element_3_5">SQLite</label>
+			<input id="element_3_6" name="competence_list[]" class="element checkbox" type="checkbox" value="MongoDB" />
+			<label class="choice" for="element_3_6">MongoDB</label>
+			<input id="element_3_7" name="competence_list[]" class="element checkbox" type="checkbox" value="NoSQL" />
+			<label class="choice" for="element_3_7">NoSQL</label>
+
+					</span> 
+					</li></td>
+					<td><li id="li_4" >
+					<label class="description" for="element_4">Framework Knowledge
+			 </label>
+					<span>
+			<input id="element_4_1" name="competence_list[]" class="element checkbox" type="checkbox" value="Spring" />
+			<label class="choice" for="element_4_1">Spring</label>
+			<input id="element_4_2" name="competence_list[]" class="element checkbox" type="checkbox" value="Hibernate" />
+			<label class="choice" for="element_4_2">Hibernate</label>
+			<input id="element_4_3" name="competence_list[]" class="element checkbox" type="checkbox" value="Struts" />
+			<label class="choice" for="element_4_3">Struts</label>
+			<input id="element_4_4" name="competence_list[]" class="element checkbox" type="checkbox" value="MyBatis" />
+			<label class="choice" for="element_4_4">MyBatis</label>
+			<input id="element_4_5" name="competence_list[]" class="element checkbox" type="checkbox" value="Android SDK" />
+			<label class="choice" for="element_4_5">Android SDK</label>
+			<input id="element_4_6" name="competence_list[]" class="element checkbox" type="checkbox" value="iOS SDK" />
+			<label class="choice" for="element_4_6">iOS SDK</label>
+
+					</span> 
+					</li></td>
+					<td><li id="li_5" >
+					<label class="description" for="element_5">Web Service Languages
+			 </label>
+					<span>
+			<input id="element_5_1" name="competence_list[]" class="element checkbox" type="checkbox" value="JSON" />
+			<label class="choice" for="element_5_1">JSON</label>
+			<input id="element_5_2" name="competence_list[]" class="element checkbox" type="checkbox" value="SOAP" />
+			<label class="choice" for="element_5_2">SOAP</label>
+			<input id="element_5_3" name="competence_list[]" class="element checkbox" type="checkbox" value="XML" />
+			<label class="choice" for="element_5_3">XML</label>
+			<input id="element_5_4" name="competence_list[]" class="element checkbox" type="checkbox" value="JAX" />
+			<label class="choice" for="element_5_4">JAX</label>
+			<input id="element_5_5" name="competence_list[]" class="element checkbox" type="checkbox" value="REST/RESTful" />
+			<label class="choice" for="element_5_5">REST/RESTful</label>
+
+					</span> 
+					</li></td>
+					  </tr>
+					  <tr>
+					    <td><li id="li_6" >
+					<label class="description" for="element_6">IDEs
+			 </label>
+					<span>
+			<input id="element_6_1" name="competence_list[]" class="element checkbox" type="checkbox" value="Eclipse" />
+			<label class="choice" for="element_6_1">Eclipse</label>
+			<input id="element_6_2" name="competence_list[]" class="element checkbox" type="checkbox" value="NetBeans" />
+			<label class="choice" for="element_6_2">NetBeans</label>
+			<input id="element_6_3" name="competence_list[]" class="element checkbox" type="checkbox" value="Visual Studio" />
+			<label class="choice" for="element_6_3">Visual Studio</label>
+			<input id="element_6_4" name="competence_list[]" class="element checkbox" type="checkbox" value="Android Studio" />
+			<label class="choice" for="element_6_4">Android Studio</label>
+			<input id="element_6_5" name="competence_list[]" class="element checkbox" type="checkbox" value="Xcode" />
+			<label class="choice" for="element_6_5">Xcode</label>
+			<input id="element_6_6" name="competence_list[]" class="element checkbox" type="checkbox" value="IntelliJ IDEA" />
+			<label class="choice" for="element_6_6">IntelliJ IDEA</label>
+
+					</span> 
+					</li></td>
+					    <td><li id="li_7" >
+					<label class="description" for="element_7">Build Tools
+			 </label>
+					<span>
+			<input id="element_7_1" name="competence_list[]" class="element checkbox" type="checkbox" value="Maven" />
+			<label class="choice" for="element_7_1">Maven</label>
+			<input id="element_7_2" name="competence_list[]" class="element checkbox" type="checkbox" value="Gradle" />
+			<label class="choice" for="element_7_2">Gradle</label>
+			<input id="element_7_3" name="competence_list[]" class="element checkbox" type="checkbox" value="Ant" />
+			<label class="choice" for="element_7_3">Ant</label>
+			<input id="element_7_4" name="competence_list[]" class="element checkbox" type="checkbox" value="Ivy" />
+			<label class="choice" for="element_7_4">Ivy</label>
+
+					</span> 
+					</li></td>
+					<td><li id="li_8" >
+					<label class="description" for="element_8">Versioning Tools
+			 </label>
+					<span>
+			<input id="element_8_1" name="competence_list[]" class="element checkbox" type="checkbox" value="SVN" />
+			<label class="choice" for="element_8_1">SVN</label>
+			<input id="element_8_2" name="competence_list[]" class="element checkbox" type="checkbox" value="Git" />
+			<label class="choice" for="element_8_2">Git</label>
+			<input id="element_8_3" name="competence_list[]" class="element checkbox" type="checkbox" value="Perforge" />
+			<label class="choice" for="element_8_3">Perforge</label>
+			<input id="element_8_4" name="competence_list[]" class="element checkbox" type="checkbox" value="Team Foundation Server" />
+			<label class="choice" for="element_8_4">Team Foundation Server</label>
+
+		</span> 
+		</li></td>
+		  </tr>
+
+		</table>					
+		<ul >
+			
+																			<li id="li_1" >
+				<label class="description" for="element_1">Other </label>
+				<div>
+					<textarea id="element_1" name="otherCompetence" class="element textarea small"></textarea> 
+				</div> 
+				</li>
+			
+					
+		</ul>
+		<label class="description" for="element_1">Working Days </label>
+	
+		<table>
+			<tr>
+				<td><input id="chkboxMonday" name="workdays_list[]" class="element checkbox" type="checkbox" value="Monday" />
+<label class="choice" for="element_1_1">Monday</label>
+				</td>
+				<td><div>
+		<select class="element select medium" name="drpdownMonday" id="drpdownMondayid"> 
+					<option value="2" selected >Full Day</option>
+					<option value="0" >Before Noon</option>
+					<option value="1" >After Noon</option>
+
+		</select>
+		</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input id="chkboxTuesday" name="workdays_list[]" class="element checkbox" type="checkbox" value="Tuesday" />
+					<label class="choice" for="element_1_2">Tuesday</label>
+				</td>
+				<td>
+					<div>
+						<select class="element select medium"  name="drpdownTuesday" id="drpdownTuesdayid"> 
+							<option value="2" selected >Full Day</option>
+							<option value="0" >Before Noon</option>
+							<option value="1" >After Noon</option>
+						</select>
+							</div>
+				</td>
+			</tr>
+			<tr>
+				<td><input id="chkboxWednesday" name="workdays_list[]" class="element checkbox" type="checkbox" value="Wednesday" />
+				<label class="choice" for="element_1_3">Wednesday</label></td>
+								<td><div>
+						<select class="element select medium"  name="drpdownWednesday" id="drpdownWednesdayid"> 
+							<option value="2" selected >Full Day</option>
+					<option value="0" >Before Noon</option>
+					<option value="1" >After Noon</option>
+				
+						</select>
+						</div></td>
+			</tr>
+			<tr>
+				<td><input id="chkboxThursday" name="workdays_list[]" class="element checkbox" type="checkbox" value="Thursday" />
+					<label class="choice" for="element_1_4">Thursday</label></td>
+									<td><div>
+							<select class="element select medium"  name="drpdownThursday" id="drpdownThursdayid"> 
+					
+					<option value="2" selected >Full Day</option>
+					<option value="0" >Before Noon</option>
+					<option value="1" >After Noon</option>
+					
+					
+							</select>
+							</div></td>
+			</tr>
+			<tr>
+							<td><input id="chkboxFriday" name="workdays_list[]" class="element checkbox" type="checkbox" value="Friday" />
+			<label class="choice" for="element_1_5">Friday</label>
+			</td>
+							<td><div>
+					<select class="element select medium"  name="drpdownFriday" id="drpdownFridayid"> 
+					<option value="2" selected >Full Day</option>
+					<option value="0" >Before Noon</option>
+					<option value="1" >After Noon</option>
+
+					</select>
+		</div></td>
+			</tr>
+
+		</table>		
+		
+			
+			<li class="buttons">
+			    <input type="hidden" name="form_id" value="796235" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="AddPersonelProfile" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+		<div id="footer">
+	
+			
+		</div>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	</body>
+</html>
